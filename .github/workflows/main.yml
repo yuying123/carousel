@@ -28,8 +28,8 @@ jobs:
 
       - name: Zip projects
         run: |
-        zip -r projects.zip .
-        echo "projects.zip file created"
+          zip -r projects.zip .
+          echo "projects.zip file created"
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
