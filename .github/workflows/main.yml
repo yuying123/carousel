@@ -25,3 +25,15 @@ jobs:
         with:
           branch: yy # 部署后提交到那个分支
           folder: dist # 这里填打包好的目录名称
+
+      - name: Zip projects
+        run: |
+        zip -r projects.zip .
+        echo "projects.zip file created"
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+            name: zipped-projects
+            path: projects.zip
+
+     
